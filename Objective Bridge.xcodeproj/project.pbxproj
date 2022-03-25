@@ -9,21 +9,36 @@
 /* Begin PBXBuildFile section */
 		7139569127EE558100C5F6B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7139569027EE558100C5F6B7 /* AppDelegate.swift */; };
 		7139569327EE558100C5F6B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7139569227EE558100C5F6B7 /* SceneDelegate.swift */; };
-		7139569527EE558100C5F6B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7139569427EE558100C5F6B7 /* ViewController.swift */; };
-		7139569827EE558100C5F6B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7139569627EE558100C5F6B7 /* Main.storyboard */; };
+		7139569527EE558100C5F6B7 /* MoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7139569427EE558100C5F6B7 /* MoviesTableViewController.swift */; };
 		7139569A27EE558300C5F6B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7139569927EE558300C5F6B7 /* Assets.xcassets */; };
 		7139569D27EE558300C5F6B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7139569B27EE558300C5F6B7 /* LaunchScreen.storyboard */; };
+		713956AE27EE586600C5F6B7 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713956AC27EE586600C5F6B7 /* MovieCell.swift */; };
+		713956AF27EE586600C5F6B7 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 713956AD27EE586600C5F6B7 /* MovieCell.xib */; };
+		713956B327EE5C3F00C5F6B7 /* MovieDBService.m in Sources */ = {isa = PBXBuildFile; fileRef = 713956B227EE5C3F00C5F6B7 /* MovieDBService.m */; };
+		713956B927EE610700C5F6B7 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 713956B727EE610700C5F6B7 /* Movie.m */; };
+		713956BF27EE717B00C5F6B7 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713956BD27EE717B00C5F6B7 /* Storyboarded.swift */; };
+		713956C027EE717B00C5F6B7 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713956BE27EE717B00C5F6B7 /* Coordinator.swift */; };
+		713956C327EE71DF00C5F6B7 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713956C227EE71DF00C5F6B7 /* MainCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7139568D27EE558100C5F6B7 /* Objective Bridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Objective Bridge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7139569027EE558100C5F6B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7139569227EE558100C5F6B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7139569427EE558100C5F6B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7139569727EE558100C5F6B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7139569427EE558100C5F6B7 /* MoviesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewController.swift; sourceTree = "<group>"; };
 		7139569927EE558300C5F6B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7139569C27EE558300C5F6B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7139569E27EE558300C5F6B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		713956AC27EE586600C5F6B7 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		713956AD27EE586600C5F6B7 /* MovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
+		713956B127EE5C3F00C5F6B7 /* Objective Bridge-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Objective Bridge-Bridging-Header.h"; sourceTree = "<group>"; };
+		713956B227EE5C3F00C5F6B7 /* MovieDBService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieDBService.m; sourceTree = "<group>"; };
+		713956B427EE5CF200C5F6B7 /* MovieDBService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieDBService.h; sourceTree = "<group>"; };
+		713956B727EE610700C5F6B7 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		713956B827EE610700C5F6B7 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		713956BD27EE717B00C5F6B7 /* Storyboarded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		713956BE27EE717B00C5F6B7 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		713956C227EE71DF00C5F6B7 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +71,88 @@
 		7139568F27EE558100C5F6B7 /* Objective Bridge */ = {
 			isa = PBXGroup;
 			children = (
-				7139569027EE558100C5F6B7 /* AppDelegate.swift */,
-				7139569227EE558100C5F6B7 /* SceneDelegate.swift */,
-				7139569427EE558100C5F6B7 /* ViewController.swift */,
-				7139569627EE558100C5F6B7 /* Main.storyboard */,
+				713956A427EE569F00C5F6B7 /* App */,
+				713956BC27EE716A00C5F6B7 /* Coordinator */,
+				713956B027EE5C1100C5F6B7 /* Networking */,
+				713956BB27EE618300C5F6B7 /* Movies */,
+				713956C427EE721D00C5F6B7 /* Details */,
+				713956BA27EE613A00C5F6B7 /* Model */,
 				7139569927EE558300C5F6B7 /* Assets.xcassets */,
 				7139569B27EE558300C5F6B7 /* LaunchScreen.storyboard */,
 				7139569E27EE558300C5F6B7 /* Info.plist */,
 			);
 			path = "Objective Bridge";
+			sourceTree = "<group>";
+		};
+		713956A427EE569F00C5F6B7 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				7139569027EE558100C5F6B7 /* AppDelegate.swift */,
+				7139569227EE558100C5F6B7 /* SceneDelegate.swift */,
+				713956B127EE5C3F00C5F6B7 /* Objective Bridge-Bridging-Header.h */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		713956AB27EE571100C5F6B7 /* Movie Cell */ = {
+			isa = PBXGroup;
+			children = (
+				713956AC27EE586600C5F6B7 /* MovieCell.swift */,
+				713956AD27EE586600C5F6B7 /* MovieCell.xib */,
+			);
+			path = "Movie Cell";
+			sourceTree = "<group>";
+		};
+		713956B027EE5C1100C5F6B7 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				713956B227EE5C3F00C5F6B7 /* MovieDBService.m */,
+				713956B427EE5CF200C5F6B7 /* MovieDBService.h */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		713956BA27EE613A00C5F6B7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				713956B727EE610700C5F6B7 /* Movie.m */,
+				713956B827EE610700C5F6B7 /* Movie.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		713956BB27EE618300C5F6B7 /* Movies */ = {
+			isa = PBXGroup;
+			children = (
+				7139569427EE558100C5F6B7 /* MoviesTableViewController.swift */,
+				713956AB27EE571100C5F6B7 /* Movie Cell */,
+			);
+			path = Movies;
+			sourceTree = "<group>";
+		};
+		713956BC27EE716A00C5F6B7 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				713956C127EE71C700C5F6B7 /* Util */,
+				713956C227EE71DF00C5F6B7 /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		713956C127EE71C700C5F6B7 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				713956BE27EE717B00C5F6B7 /* Coordinator.swift */,
+				713956BD27EE717B00C5F6B7 /* Storyboarded.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		713956C427EE721D00C5F6B7 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +187,7 @@
 				TargetAttributes = {
 					7139568C27EE558100C5F6B7 = {
 						CreatedOnToolsVersion = 13.3;
+						LastSwiftMigration = 1330;
 					};
 				};
 			};
@@ -125,9 +214,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				713956AF27EE586600C5F6B7 /* MovieCell.xib in Resources */,
 				7139569D27EE558300C5F6B7 /* LaunchScreen.storyboard in Resources */,
 				7139569A27EE558300C5F6B7 /* Assets.xcassets in Resources */,
-				7139569827EE558100C5F6B7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +227,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7139569527EE558100C5F6B7 /* ViewController.swift in Sources */,
+				713956C027EE717B00C5F6B7 /* Coordinator.swift in Sources */,
+				713956B927EE610700C5F6B7 /* Movie.m in Sources */,
+				713956B327EE5C3F00C5F6B7 /* MovieDBService.m in Sources */,
+				7139569527EE558100C5F6B7 /* MoviesTableViewController.swift in Sources */,
 				7139569127EE558100C5F6B7 /* AppDelegate.swift in Sources */,
 				7139569327EE558100C5F6B7 /* SceneDelegate.swift in Sources */,
+				713956AE27EE586600C5F6B7 /* MovieCell.swift in Sources */,
+				713956C327EE71DF00C5F6B7 /* MainCoordinator.swift in Sources */,
+				713956BF27EE717B00C5F6B7 /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7139569627EE558100C5F6B7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7139569727EE558100C5F6B7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7139569B27EE558300C5F6B7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -285,6 +372,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M7DG8QRAF9;
@@ -303,6 +391,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "br.poa.sprenger.Objective-Bridge";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Objective Bridge/App/Objective Bridge-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -313,6 +403,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M7DG8QRAF9;
@@ -331,6 +422,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "br.poa.sprenger.Objective-Bridge";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Objective Bridge/App/Objective Bridge-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
