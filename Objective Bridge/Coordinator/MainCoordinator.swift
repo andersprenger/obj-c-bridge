@@ -20,4 +20,11 @@ class MainCoordinator: Coordinator {
         navigationController.navigationBar.prefersLargeTitles = true
         navigationController.pushViewController(vc, animated: false)
     }
+    
+    func showDetails(of movie: Movie, genreDictionary: [Int: String]?) {
+        let vc = DetailsViewController.instantiate()
+        vc.movie = movie
+        vc.genreDictionary = genreDictionary
+        navigationController.pushViewController(vc, animated: true)
+    }
 }

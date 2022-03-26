@@ -9,13 +9,14 @@ import UIKit
 
 class MoviesTableViewController: UITableViewController {
 
+    var coordinator: MainCoordinator? = nil
+    var page = 1
+
     var popularMovies: [Movie] = []
     var nowPlayingMovies: [Movie] = []
     var searchedMovies: [Movie] = []
     
-    var coordinator: MainCoordinator? = nil
-    
-    var page = 1
+    var genreDictionary: [Int: String]?
     
     override func loadView() {
         super.loadView()
@@ -28,6 +29,7 @@ class MoviesTableViewController: UITableViewController {
         tableView.separatorStyle = .none
         
         self.title = "Movies"
+        genreDictionary = MovieDBService.fetchGenres() as? [Int : String]
         
         MovieDBService.fetchPopularMovies { moviesNSMutableArray in
             guard let movies = moviesNSMutableArray! as NSArray as? [Movie] else {
@@ -106,7 +108,18 @@ class MoviesTableViewController: UITableViewController {
         
         return cell
     }
-
-
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let movie: Movie
+        
+        switch sections.allCases[indexPath.section] {
+        case .popular:
+            movie = popularMovies[indexPath.row]
+        case .nowPlaying:
+            movie = nowPlayingMovies[indexPath.row]
+        }
+        
+        coordinator?.showDetails(of: movie, genreDictionary: genreDictionary)
+    }
 }
 
