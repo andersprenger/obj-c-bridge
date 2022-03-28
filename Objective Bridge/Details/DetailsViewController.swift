@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class DetailsViewController: UIViewController, Storyboarded {
     var movie: Movie?
@@ -29,11 +30,13 @@ class DetailsViewController: UIViewController, Storyboarded {
             return
         }
         
-        let posterCache = MovieDBService.imageCache()
+//        let posterCache = MovieDBService.imageCache()
+//
+//        if let posterImage = posterCache?.object(forKey: NSString(string: movie.urlImage)) as? UIImage {
+//            poster.image = posterImage
+//        }
         
-        if let posterImage = posterCache?.object(forKey: NSString(string: movie.urlImage)) as? UIImage {
-            poster.image = posterImage
-        }
+        poster.kf.setImage(with: URL(string: "https://image.tmdb.org/t/p/original\(movie.urlImage!)"))
         
         movieTitle.text = movie.title
         overview.text = movie.overview

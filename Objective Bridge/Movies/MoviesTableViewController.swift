@@ -96,12 +96,14 @@ class MoviesTableViewController: UITableViewController {
             movie = nowPlayingMovies[indexPath.row]
         }
         
-        let posterCache = MovieDBService.imageCache()
+//        let posterCache = MovieDBService.imageCache()
+//
+//        if let poster = posterCache?.object(forKey: NSString(string: movie.urlImage)) as? UIImage {
+//            cell.poster.image = poster
+//        }
         
-        if let poster = posterCache?.object(forKey: NSString(string: movie.urlImage)) as? UIImage {
-            cell.poster.image = poster
-        }
-        
+        cell.poster.kf.setImage(with: URL(string: "https://image.tmdb.org/t/p/original\(movie.urlImage!)"))
+
         cell.title.text = movie.title
         cell.overview.text = movie.overview
         cell.rating.text = String(format: "%.1f", movie.rating.floatValue)

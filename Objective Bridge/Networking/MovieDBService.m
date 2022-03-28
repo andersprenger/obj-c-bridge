@@ -22,13 +22,13 @@ NSString *searchUrl = @"https://api.themoviedb.org/3/search/movie?api_key=a23088
 NSString *baseImageURL = @"https://image.tmdb.org/t/p/original";
 NSString *genresURL = @"https://api.themoviedb.org/3/genre/movie/list?api_key=a23088f8339f956b04f1b7064ddd50f8";
 
-+ (NSCache *) imageCache {
-    if (!_imageCache) {
-        _imageCache = NSCache.new;
-    }
-    
-    return _imageCache;
-}
+//+ (NSCache *) imageCache {
+//    if (!_imageCache) {
+//        _imageCache = NSCache.new;
+//    }
+//
+//    return _imageCache;
+//}
 
 + (NSString *) searchURLWithQuery:(NSString *) query {
     return [NSString stringWithFormat:@"%@&query=%@", searchUrl, query];
@@ -83,13 +83,13 @@ NSString *genresURL = @"https://api.themoviedb.org/3/genre/movie/list?api_key=a2
             [movies addObject: movie];
         }
         
-        NSCache * cache = [self imageCache];
-        
-        for (Movie * movie in movies) {
-            [self fetchPosterOf: movie withHandler:^(UIImage *image) {
-                [cache setObject: image forKey: movie.urlImage];
-            }];
-        }
+//        NSCache * cache = [self imageCache];
+//
+//        for (Movie * movie in movies) {
+//            [self fetchPosterOf: movie withHandler:^(UIImage *image) {
+//                [cache setObject: image forKey: movie.urlImage];
+//            }];
+//        }
         
         handler(movies);
     }];
@@ -99,22 +99,22 @@ NSString *genresURL = @"https://api.themoviedb.org/3/genre/movie/list?api_key=a2
     return session;
 }
 
-+ (void) fetchPosterOf: (Movie *) movie withHandler:(void (^) (UIImage * image)) handler {
-    NSMutableString *urlString = [NSMutableString stringWithCapacity: 50];
-    [urlString appendString: baseImageURL];
-    [urlString appendString: movie.urlImage];
-    
-    NSURL *url = [NSURL URLWithString: urlString];
-    [[NSURLSession.sharedSession dataTaskWithURL: url
-                               completionHandler: ^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        if (data == nil) return;
-        
-        UIImage *loadedImage = [UIImage imageWithData: data];
-        
-        handler(loadedImage);
-        
-    }] resume];
-}
+//+ (void) fetchPosterOf: (Movie *) movie withHandler:(void (^) (UIImage * image)) handler {
+//    NSMutableString *urlString = [NSMutableString stringWithCapacity: 50];
+//    [urlString appendString: baseImageURL];
+//    [urlString appendString: movie.urlImage];
+//    
+//    NSURL *url = [NSURL URLWithString: urlString];
+//    [[NSURLSession.sharedSession dataTaskWithURL: url
+//                               completionHandler: ^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+//        if (data == nil) return;
+//        
+//        UIImage *loadedImage = [UIImage imageWithData: data];
+//        
+//        handler(loadedImage);
+//        
+//    }] resume];
+//}
 
 + (NSDictionary *) fetchGenres {
     NSURL *url = [NSURL URLWithString: genresURL];

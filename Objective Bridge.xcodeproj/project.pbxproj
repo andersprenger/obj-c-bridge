@@ -21,6 +21,7 @@
 		713956C327EE71DF00C5F6B7 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713956C227EE71DF00C5F6B7 /* MainCoordinator.swift */; };
 		713956C727EE7D1000C5F6B7 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713956C527EE7D1000C5F6B7 /* DetailsViewController.swift */; };
 		713956C827EE7D1000C5F6B7 /* DetailsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 713956C627EE7D1000C5F6B7 /* DetailsViewController.storyboard */; };
+		71485EAA27F248AE00005F47 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 71485EA927F248AE00005F47 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71485EAA27F248AE00005F47 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +179,9 @@
 			dependencies = (
 			);
 			name = "Objective Bridge";
+			packageProductDependencies = (
+				71485EA927F248AE00005F47 /* Kingfisher */,
+			);
 			productName = "Objective Bridge";
 			productReference = 7139568D27EE558100C5F6B7 /* Objective Bridge.app */;
 			productType = "com.apple.product-type.application";
@@ -206,6 +211,9 @@
 				Base,
 			);
 			mainGroup = 7139568427EE558100C5F6B7;
+			packageReferences = (
+				71485EA827F248AE00005F47 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 7139568E27EE558100C5F6B7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -458,6 +466,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		71485EA827F248AE00005F47 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		71485EA927F248AE00005F47 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 71485EA827F248AE00005F47 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7139568527EE558100C5F6B7 /* Project object */;
 }
