@@ -49,6 +49,6 @@ class DetailsViewController: UIViewController, Storyboarded {
         genresString.removeLast()
         
         genres.text = genresString
-//        rating.text = movie.rating //se descomentar, crasha!
+        rating.text = String(format: "%.1f", movie.rating.floatValue)
     }
 }

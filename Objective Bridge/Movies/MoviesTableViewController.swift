@@ -104,7 +104,7 @@ class MoviesTableViewController: UITableViewController {
         
         cell.title.text = movie.title
         cell.overview.text = movie.overview
-//        cell.rating.text = movie.rating
+        cell.rating.text = String(format: "%.1f", movie.rating.floatValue)
         
         return cell
     }
