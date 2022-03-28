@@ -124,5 +124,26 @@ class MoviesTableViewController: UITableViewController {
         
         coordinator?.showDetails(of: movie, genreDictionary: genreDictionary)
     }
+    
+    override func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        let currentOffset = scrollView.contentOffset.y
+        let maximumOffset = scrollView.contentSize.height - scrollView.frame.height
+        
+        if (maximumOffset - currentOffset <= 50) {
+            page += 1
+            
+            MovieDBService.fetchNowPlayingMovies(byPage: NSNumber(integerLiteral: page)) { moviesNSMutableArray in
+                guard let movies = moviesNSMutableArray! as NSArray as? [Movie] else {
+                    return
+                }
+                
+                self.nowPlayingMovies += movies
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+        }
+    }
 }
 
