@@ -12,7 +12,7 @@
 
 @end
 
-static NSCache *_imageCache;
+static NSDictionary *_genres;
 
 @implementation MovieDBService
 
@@ -22,13 +22,13 @@ NSString *searchUrl = @"https://api.themoviedb.org/3/search/movie?api_key=a23088
 NSString *baseImageURL = @"https://image.tmdb.org/t/p/original";
 NSString *genresURL = @"https://api.themoviedb.org/3/genre/movie/list?api_key=a23088f8339f956b04f1b7064ddd50f8";
 
-//+ (NSCache *) imageCache {
-//    if (!_imageCache) {
-//        _imageCache = NSCache.new;
-//    }
-//
-//    return _imageCache;
-//}
++ (NSDictionary *) genresDictionary {
+    if (!_genres) {
+        _genres = NSDictionary.new;
+    }
+
+    return _genres;
+}
 
 + (NSString *) searchURLWithQuery:(NSString *) query {
     return [NSString stringWithFormat:@"%@&query=%@", searchUrl, query];
@@ -116,7 +116,7 @@ NSString *genresURL = @"https://api.themoviedb.org/3/genre/movie/list?api_key=a2
 //    }] resume];
 //}
 
-+ (NSDictionary *) fetchGenres {
++ (void) fetchGenres {
     NSURL *url = [NSURL URLWithString: genresURL];
     NSMutableDictionary *genres = [[NSMutableDictionary alloc] initWithCapacity: 20];
     
@@ -140,7 +140,7 @@ NSString *genresURL = @"https://api.themoviedb.org/3/genre/movie/list?api_key=a2
         }
     }] resume];
     
-    return genres;
+    _genres = genres;
 }
 
 @end

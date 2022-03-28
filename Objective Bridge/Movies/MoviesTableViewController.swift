@@ -29,7 +29,8 @@ class MoviesTableViewController: UITableViewController {
         tableView.separatorStyle = .none
         
         self.title = "Movies"
-        genreDictionary = MovieDBService.fetchGenres() as? [Int : String]
+        
+        MovieDBService.fetchGenres()
         
         MovieDBService.fetchPopularMovies { moviesNSMutableArray in
             guard let movies = moviesNSMutableArray! as NSArray as? [Movie] else {

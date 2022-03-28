@@ -20,10 +20,11 @@
 + (void) fetchPopularMoviesWithHandler:(void (^)(NSMutableArray *))handler;
 + (void) fetchNowPlayingMoviesByPage: (NSNumber *) page withHandler: (void (^) (NSMutableArray *)) handler ;
 + (NSString *) searchURLWithQuery:(NSString *)query;
-+ (NSDictionary *) fetchGenres;
++ (void) fetchGenres;
 //+ (void) fetchPosterOf: (Movie *) movie withHandler:(void (^)(UIImage * image)) handler ;
 + (NSURLSessionTask *) searchForMovieWithQuery:(NSString *)query andHandler:(void (^)(NSMutableArray *))handler;
 + (NSURLSessionTask *) fetchMoviesWithHandler: (NSURL *) url andHandler: (void (^) (NSMutableArray *)) handler;
 //+ (NSCache *) imageCache;
++ (NSDictionary *) genresDictionary;
 
 @end

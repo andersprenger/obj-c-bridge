@@ -21,6 +21,8 @@ class DetailsViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        genreDictionary = MovieDBService.genresDictionary() as? [Int: String]
+        
         poster.layer.cornerRadius = 10
         self.title = "Details"
         
